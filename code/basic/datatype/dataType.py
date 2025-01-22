@@ -43,6 +43,60 @@ def listOperation():
     print(listVar)
 
 
+def tupleOperation():
+    tuplesVar = ("1", "2", "3")
+    print(tuplesVar)
+    print(tuplesVar[0])
+    print(tuplesVar[0:])
+    print(tuplesVar[:2])
+    print(tuplesVar[0:1])
+    # tuplesVar[2] = '4' //item assignment
+    for x in tuplesVar:
+        print(x)
+    # unpacking
+    fruits = ("apple", "orange", "banana")
+    (apple, orange, banana) = fruits
+    print(apple)
+    print(orange)
+    print(banana)
+    (apple, *orange) = fruits
+    print(apple)
+    print(orange)
+    (apple, *orange, banana) = fruits
+    print(apple)
+    print(orange)
+    print(banana)
+    x = list(fruits)
+    x[0] = "Avinash"
+    y = tuple(x)
+    print(y)
+
+def setOperation():
+    setVar = { 'a', 'b', 'c' }
+    setVar2 = { 'd', 'e', 'f' }
+    setVar.add('d')
+    setVar.remove('a')
+    setVar.discard('b')
+    print(setVar)
+    for x in setVar:
+        print(x)
+    print('b' in setVar)
+    print('b' not in setVar)
+    setVar.update(setVar2)
+    print(setVar)
+    set1 = {"a", "b", "c"}
+    set2 = {1, 2, 3}
+    print(set1.union(set2))
+    print(set1 | set2)
+    print(set1.intersection(set2))
+
+
+
+
+
+
 primitiveData()
 nonPrimitiveData()
 listOperation()
+tupleOperation()
+setOperation()
