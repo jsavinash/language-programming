@@ -71,17 +71,18 @@ def tupleOperation():
     y = tuple(x)
     print(y)
 
+
 def setOperation():
-    setVar = { 'a', 'b', 'c' }
-    setVar2 = { 'd', 'e', 'f' }
-    setVar.add('d')
-    setVar.remove('a')
-    setVar.discard('b')
+    setVar = {"a", "b", "c"}
+    setVar2 = {"d", "e", "f"}
+    setVar.add("d")
+    setVar.remove("a")
+    setVar.discard("b")
     print(setVar)
     for x in setVar:
         print(x)
-    print('b' in setVar)
-    print('b' not in setVar)
+    print("b" in setVar)
+    print("b" not in setVar)
     setVar.update(setVar2)
     print(setVar)
     set1 = {"a", "b", "c"}
@@ -91,8 +92,33 @@ def setOperation():
     print(set1.intersection(set2))
 
 
-
-
+def dictionariesOperation():
+    dictionariesVar = {"a": 1}
+    dictionariesVar2 = dict(name="Avinash", age=12, demo=1222, dem2="demo2")
+    dictionariesVar3 = dict(name="Avinash", age=12, demo=1222, dem2="demo2")
+    print("a" in dictionariesVar)
+    print(dictionariesVar["a"])
+    print(dictionariesVar.get("a"))
+    x = dictionariesVar.keys()
+    print(x)
+    y = dictionariesVar.values()
+    print(y)
+    z = dictionariesVar.items()
+    print(z)
+    dictionariesVar["b"] = 2
+    print(dictionariesVar)
+    dictionariesVar.update({"c": 3})
+    print(dictionariesVar)
+    dictionariesVar2.pop("name")
+    dictionariesVar2.popitem()
+    print(dictionariesVar2)
+    del dictionariesVar2["age"]
+    print(dictionariesVar2)
+    dictionariesVar2.clear()
+    print(dictionariesVar2)
+    for x in dictionariesVar3:
+        print(dictionariesVar3[x])
+    print(dictionariesVar3.copy())
 
 
 primitiveData()
@@ -100,3 +126,4 @@ nonPrimitiveData()
 listOperation()
 tupleOperation()
 setOperation()
+dictionariesOperation()
