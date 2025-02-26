@@ -2,7 +2,7 @@ class OuterClass:
     class EmptyClass:
         pass
     class InnerClass:
-        name = "Inner class name"
+        name = "Inner class name" #static / class variable
         def __init__(self):
             print("Innner class constructor called")
 
